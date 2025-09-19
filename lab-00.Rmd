@@ -17,15 +17,11 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Izzat", "Brodie"),
+  github_username = c("Pizzat123", "Brodieclark23"), 
+  colour = c("Green", "Blue"),
+  hobby = c("Cycling", "Gym"),
+  favourite_number = c(7, 8)
   )
 
 team_data
@@ -47,19 +43,19 @@ p1
 ```
 
 
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+The plot shows the favourite number of each team member on a bar plot with the github username on the x-axis.
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "Github Usernames", 
+          y = "Favourite Number",
+          title = "Team Member Favourite Numbers")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+labs() creates labels for each axis and a title for the plot.
 
 ### Exercise 20
 
@@ -69,4 +65,5 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+This visualisation isn't good for the data as most of the points would have only 1 count, and the chart would be very crowded.
+A pie chart could be a better visualisation for the larger data frame.
